@@ -66,7 +66,7 @@ function App() {
 
   const confirmDelete = (e) => {
     console.log(e);
-    fetch("https://vast-ruby-worm-wrap.cyclic.app/admin/" + e.id, {
+    fetch("/admin/" + e.id, {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -163,7 +163,7 @@ function App() {
     }
   }, [search]);
   function apiData() {
-    fetch("https://vast-ruby-worm-wrap.cyclic.app/get")
+    fetch("/get")
       .then((res) => res.json())
       .then(
         (result) => {
@@ -193,7 +193,7 @@ function App() {
   }
 
   async function submitData(e) {
-    await fetch("https://vast-ruby-worm-wrap.cyclic.app/admin", {
+    await fetch("/admin", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -217,7 +217,7 @@ function App() {
       });
   }
   async function updateData(e, id) {
-    await fetch("https://vast-ruby-worm-wrap.cyclic.app/admin/" + id, {
+    await fetch("/admin/" + id, {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",

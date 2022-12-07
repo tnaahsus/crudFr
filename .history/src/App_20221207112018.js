@@ -66,7 +66,7 @@ function App() {
 
   const confirmDelete = (e) => {
     console.log(e);
-    fetch("https://vast-ruby-worm-wrap.cyclic.app/admin/" + e.id, {
+    fetch("/admin/" + e.id, {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
